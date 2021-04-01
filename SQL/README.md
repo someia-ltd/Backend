@@ -4,4 +4,4 @@ We will store data in both SQL and firestore on GCP, and a web-socket server in 
 
 ## SQL ER Diagram
 
-![ER Diagram](Someia\ ER\ diagram.png)
+![ER Diagram](Someia_ER_diagram.png)
