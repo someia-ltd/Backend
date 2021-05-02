@@ -6,4 +6,4 @@ If there is any need to change the database structure, please don't hesitate and
 
 ## SQL ER Diagram
 
-![ER Diagram](Someia_ER_diagram.png)
+![ER Diagram](Someia_ER_diagram.jpg)
