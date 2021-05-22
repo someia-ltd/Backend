@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Someia Story Clustering</title>
+  <meta name="description" content="Someia Story Clustering">
+  <meta name="author" content="Oscar Tong">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <style>
+	table {
+		border-collapse: collapse;
+	}
+
+	table, th, td {
+		border: 1px solid black;
+	}
+  </style>
+
+</head>
+<body>
+  <h2>Story clustering</h2>
+  <p>This app is aimed at making cluster of story from MongoDB and return the count and center of each clusters.</p>
+  <p>This flask app will get data from latlong of all public story from MongoDB and then put it in a pandas DataFrame.</p>
+  <p>Then we use sklearn.cluster.KMeans to make cluster. Centers and count will be returned.</p>
+  <p></p>
+  <h3>Number of clusters</h3>
+  <p>We would like to make 5 levels of cluster.</p>
+  <p>We want to specify the number of cluster of the first level, and average story of each cluster in the last level.</p>
+  <p>We have set number of cluster of the first level as 3, and average story of each cluster in the last level as 15.</p>
+  <h3>Return format</h3>
+  <p>Return format is json. here is a preview of return page.</p>
+  <pre>
+    { 'Update time' : 'Sun May 23 02:52:42 2021',
+      'Level 1': [
+             {'count': 761,
+              'latitude': 22.37912142049934,
+              'longitude': 114.00134667674114},
+             {'count': 887,
+              'latitude': 22.451378438063063,
+              'longitude': 114.18916268806306},
+             {'count': 2437,
+              'latitude': 22.308136586617405,
+              'longitude': 114.18130988546798}
+                ],
+      'Level 2': [
+             {'count': 103,
+              'latitude': 22.318292669902913,
+              'longitude': 114.26118320388349},
+             {'count': 52,
+              'latitude': 22.357023826923076,
+              'longitude': 114.10281513461538},
+             {'count': 76,
+              'latitude': 22.494363513157893,
+              'longitude': 114.14363502631579},
+             {'count': 64,
+              'latitude': 22.38013378125,
+              'longitude': 113.972384640625},
+              ...
+                ],
+      'Level 3' : [...],
+      'Level 4' : [...],
+      'Level 5' : [...]
+    }
+  </pre>
+</body>
+</html>
